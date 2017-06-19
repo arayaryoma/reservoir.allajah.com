@@ -32,6 +32,6 @@ CNAME貼って独自ドメイン使えるし、DNS挟めばSSLも貼れるしね
 
 ## 開発秘話
 
-このWebサイトのコードは[GitHubで公開しています](https://github.com/Allajah/allajah.github.io)。
+このWebサイトのソースコードは[GitHubで公開しています](https://github.com/Allajah/allajah.github.io)。
 
 テーマは [scribble](https://github.com/muan/scribble) をカスタマイズして使わさせてもらっています。
