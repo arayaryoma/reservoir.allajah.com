@@ -1,9 +1,10 @@
 {% assign is_post = page.date %}
 <!doctype>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>{{ page.title }} - {{ site.title }}</title>
     {% include head.html %}
   </head>
@@ -49,6 +50,10 @@
     </div>
     <footer class="mw7 center tc pt3 pb4 silver">
       Built with Jekyll using <a href="http://github.com/muan/scribble" class="link silver hover-blue pv1">Scribble</a>.
+      <div class="footer-sns">
+        <a href="https://twitter.com/_araya_"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/allajah"><i class="fa fa-github"></i></a>
+      </div>
     </footer>
   </body>
 </html>

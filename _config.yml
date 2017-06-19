@@ -17,3 +17,6 @@ permalink:        /posts/:title
 defaults:
   - values:
       layout: "default"
+sass:
+  sass_dir: _sass
+  style: compressed
