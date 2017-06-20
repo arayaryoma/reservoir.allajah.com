@@ -38,10 +38,10 @@ Google Developers GroupのAmandaさんのセッション。Amandaさんがなん
 
 
 ## API.ai demo by  [@tenntenn](https://twitter.com/tenntenn)
-tenntennさんによるAPI.aiによるデモ。 Slackのintegrationもあるっぽいので、色々と遊べそう。
+tenntennさんによるAPI.aiのデモ。 Slackのintegrationもあるっぽいので、色々と遊べそう。
 Amazon Lexと今度比較して使ってみたい。
 
-Googleに買われる直前くらいに触ったことあって、その頃は日本語はまだ全然バカだったんだけど、今もそんなに頭良くないらしく、改善中とのこと。
+僕もGoogleに買われる直前くらいに触ったことあって、その頃は日本語はまだ全然バカだったんだけど、今もそんなに頭良くないらしく、改善中とのこと。
 英語はかなり頭いいらしいので、現状使うとしたら英語一択になりそう。
 
 
