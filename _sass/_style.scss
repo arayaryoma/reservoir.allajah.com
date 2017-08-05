@@ -1,5 +1,45 @@
-@import "https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css";
-@import "reset";
+$bg-color: #F5F5F5;
+$border-color: #85929E;
+$main-text-color: #17202A;
+html {
+  font-family: "Sawarabi Gothic";
+}
+body {
+  background: $bg-color;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+nav {
+  border-bottom: 1px solid $border-color;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    li {
+      color: $main-text-color;
+    }
+  }
+}
+
+.site-title {
+  font-weight: 100;
+}
+
+.container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
 
 .bg-super-white { background: #f9f9f9; }
 .top-50 { top: 50% }
