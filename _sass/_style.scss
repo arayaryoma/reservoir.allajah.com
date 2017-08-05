@@ -107,14 +107,10 @@ main {
   }
 }
 
-.bg-super-white {
-  background: #f9f9f9;
-}
-
-.top-50 {
-  top: 50%;
-}
 /* Markdown styles */
+.markdown-body {
+  line-height: 2;
+}
 .markdown-body a {
   text-decoration: none;
   color: #357edd;
