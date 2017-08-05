@@ -2,13 +2,13 @@
 title: Posts
 ---
 
-<ul class="list pa0">
+<ul class="post-list">
   {% if site.posts %}
     {% for post in site.posts %}
-      <li class="mv2">
-        <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
-          <time class="fr silver">{{ post.date | date_to_string }} </time>
-          {{ post.title }}
+      <li>
+        <a href="{{ site.url }}{{ post.url }}">
+          <span class="post-list-item-title">{{ post.title }}</span>
+          <time class="post-list-item-time">{{ post.date | date_to_string }} </time>
         </a>
       </li>
     {% endfor %}

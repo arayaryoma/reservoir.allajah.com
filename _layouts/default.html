@@ -8,6 +8,7 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//necolas.github.io/normalize.css/7.0.0/normalize.css">
   <link href="//fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
+  <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
   <title>{{ page.title }} - {{ site.title }}</title>
   {% include head.html %}
 </head>
@@ -19,52 +20,45 @@
       </a>
     <p>{{ site.title }}</p>
   </header>
-  <div class="">
-    <div class="container">
+  <div class="container">
       <nav aria-label="Main">
         <ul>
           {% for link in site.links %}
           <li>
             <a class="" href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">
           {{ link.name }}
-        </a>
-        {% endfor %}
+        </a> {% endfor %}
           </li>
         </ul>
       </nav>
-    </div>
-
-    <main class="">
-      {% if page.title %}
-      <div class="mb4">
-        {% if page.date %}
-        <div class="">{{ page.date | date_to_string }}</div>{% endif %}
-        <h1 class="">
-              {% if is_post %}
-              {% endif %}
-              {{ page.title }}
-            </h1> {% if is_post and site.share %}
-        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-        <script>
-          ! function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "//platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }
-          }(document, "script", "twitter-wjs");
-        </script>
-        <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="like"></div>
+      <main class="">
+        {% if page.title %}
+          {% if page.date %}
+          <div class="">{{ page.date | date_to_string }}</div>
+          {% endif %}
+          <h1 class="page-title"> {{ page.title }} </h1>
+          {% if is_post and site.share %}
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <script>
+            ! function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }
+            }(document, "script", "twitter-wjs");
+          </script>
+          <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="like"></div>
+          {% endif %}
         {% endif %}
-      </div>
-      {% endif %}
-      <div class="markdown-body">
-        {{ content }}
-      </div>
-      {% if is_post %}{% include signoff.html %}{% endif %}
-    </main>
+        <div class="markdown-body">
+          {{ content }}
+        </div>
+        {% if is_post %}{% include signoff.html %}{% endif %}
+
+      </main>
     {% if is_post %}{% include pagination.html %}{% endif %}
   </div>
   <footer class="">
