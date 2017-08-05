@@ -46,6 +46,10 @@ main {
   border: 1px solid $border-color;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -73,7 +77,7 @@ main {
 
 .page-title {
   font-size: 1.25rem;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 .post-list {
