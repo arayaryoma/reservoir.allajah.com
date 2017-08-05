@@ -46,6 +46,21 @@ main {
   border: 1px solid $border-color;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7em;
+  &-sns {
+    a {
+      padding: 0 0.4em;
+      color: $sub-text-color;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
 .site-title {
   font-weight: 100;
 }
