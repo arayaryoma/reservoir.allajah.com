@@ -46,7 +46,12 @@ main {
   border: 1px solid $border-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -54,10 +59,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   margin-top: 0.7em;
+
   &-sns {
     a {
       padding: 0 0.4em;
       color: $sub-text-color;
+
       &:hover {
         opacity: 0.5;
       }
@@ -83,19 +90,23 @@ h1, h2, h3, h4, h5, h6 {
 .post-list {
   list-style: none;
   padding: 0;
+
   li {
     font-size: 14px;
     margin: 1em 0;
     display: flex;
+
     &:hover {
       opacity: 0.5;
     }
+
     a {
       width: 100%;
       line-height: 2;
       display: flex;
     }
   }
+
   &-item-title {
     width: calc(100% - 7em);
     display: inline-block;
@@ -103,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+
   &-item-time {
     display: inline-flex;
     justify-content: flex-end;
@@ -110,44 +122,46 @@ h1, h2, h3, h4, h5, h6 {
     width: 7em;
   }
 }
-
 /* Markdown styles */
 .markdown-body {
   line-height: 2;
-}
-.markdown-body a {
-  text-decoration: none;
-  color: #357edd;
-}
 
-.markdown-body .highlighter-rouge {
-  padding: 0.25rem 0.5rem;
-}
+  a {
+    text-decoration: none;
+    color: #357edd;
+  }
 
-.markdown-body pre {
-  margin: 0;
-  overflow: auto;
-}
+  pre {
+    margin: 0;
+    overflow: auto;
+  }
 
-.markdown-body > .highlighter-rouge,
-.markdown-body > blockquote {
-  padding: 0.5rem 4rem;
-  margin: 2em -4rem;
-}
+  & > blockquote {
+    padding: 0.5rem 4rem;
+    margin: 2em -4rem;
+  }
 
-.markdown-body > hr {
-  margin: 2em -4rem;
-  border: 0;
-  border-bottom: 1px dotted #CCC;
-}
+  & > hr {
+    margin: 2em -4rem;
+    border: 0;
+    border-bottom: 1px dotted #CCC;
+  }
 
-.markdown-body blockquote {
-  background: #f9f9f9;
-  border-left: 0.2rem solid #ccc;
-  padding-left: 3.8rem;
-}
+  blockquote {
+    background: #f9f9f9;
+    border-left: 0.2rem solid #ccc;
+    padding-left: 3.8rem;
+  }
 
-.markdown-body img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
+
+  .filename {
+    display: inline-block;
+    padding: 0.2em 1em;
+    margin: 0;
+    background: $border-color;
+  }
 }
 /* end Markdown styles */
