@@ -1,6 +1,8 @@
 ---
 title: "jekyll code highlighting"
 date: "2017-08-06 21:49:42 +0900"
+tags:
+  - jekyll
 ---
 
 jekyllでブログ書いてると、[code highlighting](https://jekyllrb.com/docs/templates/#code-snippet-highlighting)を確実に使うことになるが、
