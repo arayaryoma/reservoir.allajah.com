@@ -154,7 +154,18 @@ h6 {
   }
 
   img {
+    max-width: 100%;
+    max-height: 20em;
+    display: block;
+    margin: 0 auto;
+  }
+  img + em {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    color: $sub-text-color;
     width: 100%;
+    text-align: center;
   }
 
   .filename {
