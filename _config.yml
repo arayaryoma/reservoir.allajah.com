@@ -23,5 +23,3 @@ sass:
 gems:
   - jemoji
   - jekyll-feed
-  - jekyll-twitter-plugin
-plugins: ["jekyll-twitter-plugin"]

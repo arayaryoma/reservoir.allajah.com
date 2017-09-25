@@ -18,14 +18,21 @@ tags:
 
 複数公演あって第1~3希望まで記入したのですが、全部落選しました。
 
-{% twitter https://twitter.com/_araya_/status/871693911290335233 %}
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">今日はsuica落とすしミカヅキの航海抽選落ちた</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/871693911290335233">2017年6月5日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 結構落ち込みました。このあと一般先行抽選にも応募したんですが落ちました。かなり落ち込みました。
 
 そのあと２ヶ月くらいして赤坂BLITZでの追加公演が発表されたのでダメ元で応募、奇跡の当選。
-{% twitter https://twitter.com/_araya_/status/899261781217951745 %}
-{% twitter https://twitter.com/_araya_/status/900292934435721216 %}
-さユりさんのライブに行ける！！！最高に嬉しかったです。
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ミカヅキの航海の先行はことごとく外れてるんだけど一応追加公演の最終選考応募したよ。一応ね</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/899261781217951745">2017年8月20日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">やっっっっっっっっっっっっっっっっっっっっったあああああああああああああああああああああああああああああああああ！！！！！！！！！！！！！！！！ <a href="https://t.co/qypuiq9a2f">pic.twitter.com/qypuiq9a2f</a></p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/900292934435721216">2017年8月23日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+さユりさんのライブに行ける！！！こんなに嬉しいことが他にあるでしょうか。
+
 
 ## 当日 - 開場前
 当日の都内は雨でした。小雨とかではなく、傘をささないとビショビショになるくらいの雨。
@@ -75,7 +82,8 @@ CDを買うのは完全に予定外でしたが、僕が発売当初に購入し
 
 ## 帰路
 電車に揺られながら、さユりさんの曲を聴いて余韻に浸っていました。
-{% twitter https://twitter.com/_araya_/status/911217422861864960 %}
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">さユりさんのライブの余韻がすごくて家に帰るのが嫌すぎる</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/911217422861864960">2017年9月22日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## まとめ
 - ライブめちゃくちゃよかった。次も抽選絶対応募して行く。
