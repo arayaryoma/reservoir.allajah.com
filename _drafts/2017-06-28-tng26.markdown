@@ -40,14 +40,9 @@ https://speakerdeck.com/kazupon/vue-on-storybook
 
 # Dependent typeとTypeScript @noraesae
 
-# ProxyServerを使った本番環境でのE2Eテスト @brn227
-- JavaScript SDKのE2Eテスト
-- SDKはクライアントの環境でテストしなきゃいけない
-- document.writeとdocument.openの協力バグがあった
-- node-mitm-proxy
-- Nightwatch.js
-- Nightwatch だとFireFoxにProxy設定できなくて、モバイルも厳しい。
-- 最終的にテストチームの人力でテストしてる
+# ProxyServerを使った本番環境でのE2Eテスト @brn227 - JavaScript SDKのE2Eテスト -
+# SDKはクライアントの環境でテストしなきゃいけない - document.writeとdocument.openの協力バグがあった -
+# node-mitm-proxy - Nightwatch.js - Nightwatch だとFireFoxにProxy設定できなくて、モバイルも厳しい。 - 最終的にテストチームの人力でテストしてる
 
 # Angular PWA lacoさん http://slides.com/laco/nodeschool-angular-pwa#/
 - Connectivity Independent, App-like, Fresh, Re-engageable がAngularPWAで容易に対応可能
