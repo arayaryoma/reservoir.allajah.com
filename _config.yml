@@ -13,7 +13,7 @@ links:
     external:     false
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /posts/:title
+permalink:        /posts/:title.html
 defaults:
   - values:
       layout: "default"
