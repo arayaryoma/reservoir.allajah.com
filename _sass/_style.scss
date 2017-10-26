@@ -128,8 +128,9 @@ h2 {
   }
 
   & > blockquote {
-    padding: 0.5rem 4rem;
-    margin: 2em -4rem;
+    color: lighten($main-text-color, 30%);
+    padding: 0.5em 2em;
+    margin: 1em 0;
   }
 
   & > hr {
