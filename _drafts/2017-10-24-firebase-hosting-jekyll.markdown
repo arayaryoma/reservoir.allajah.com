@@ -1,9 +1,11 @@
 ---
-title: "firebase-hosting-jekyll"
+title: "Firebase Hostingを使って静的Webサイトを独自ドメインかつSSL証明書付きで公開する"
 date: "2017-10-24 14:07:04 +0900"
 ---
 
 ブログのホスティング先をGitHub PagesからFirebaseに変えてみた
+
+## Firebaseホスティングとは
 
 ## Firebaseでのセットアップ
 [FirebaseのConsole](https://console.firebase.google.com/)にログインして新規プロジェクトを作成する
@@ -78,5 +80,10 @@ Firebaseの管理コンソールから、 Hostingを選択して、「ドメイ�
 自分の場合はAWSのRoute 53でポチポチやった。
 流れとしては、
 1. DNSにTXTレコードを設定して、ドメインの管理者であることを証明
-2. SSL証明書がプロビジョニングされるまで待つ(Firebaseがやってくれる)
-3. 与えられたIPv4をDNSにAレコードを貼る
+2. 与えられたIPv4をDNSにAレコードを貼る
+3. SSL証明書がプロビジョニングされるまで待つ(Firebaseがやってくれる)
+すでにGitHub PagesなどにホスティングしていてCNAMEやAレコードを貼っている場合は、2の前に外しておく。
+
+ここまででWebサイトをFirebaseにホスティングしてもらい、HTTPSに対応することができた。
+
+## 自動デプロイ
