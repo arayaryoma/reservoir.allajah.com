@@ -3,13 +3,26 @@ title: "Firebase Hostingを使って静的Webサイトを独自ドメインか�
 date: "2017-10-24 14:07:04 +0900"
 ---
 
-ブログのホスティング先をGitHub PagesからFirebaseに変えてみた
+ブログのホスティング先をGitHub PagesからFirebase Hostingに変えてみた。
 
-## Firebaseホスティングとは
+
+## Firebase Hostingとは
+その名の通りFirebaseがWebサイトをホスティングしてくれるサービス。
+
+[https://firebase.google.com/docs/hosting/](https://firebase.google.com/docs/hosting/)
+
+嬉しいポイントは
+> Zero-configuration SSL is built into Firebase Hosting so content is always delivered securely.
+
+ここにあって、なんと独自ドメインでもSSLをサポートしてくれる。
+
+[料金](https://firebase.google.com/pricing/)も、フリーでそこそこ使えて、ホスティングしてくれるファイルの最大容量は計1GB、
+月10GBまで配信できる。
+個人ブログくらいならフリーで間に合うし、足りなくなっても月$25払えば10GBストア、月50GB配信できるので安くすむ。
+
 
 ## Firebaseでのセットアップ
-[FirebaseのConsole](https://console.firebase.google.com/)にログインして新規プロジェクトを作成する
-
+[FirebaseのConsole](https://console.firebase.google.com/)にログインして新規プロジェクトを作成する。
 
 ## セットアップ
 Firebase CLIをnpmでインストールする
@@ -62,18 +75,16 @@ Configure as a single-page app (rewrite all urls to /index.html)? (y/N)
 ## ビルド
 jekyllの場合は`_config.yml`の`url`フィールドを変更する必要がある
 Firebaseのコンソールにアクセスし、projectIDを確認する。
-デプロイ先のURLは`https://{project_id}.firebaseapp.com`になるので、これを`url`フィールドに設定する({project_id}は置き換える。
+デプロイ先のURLは`https://{project_id}.firebaseapp.com`になるので、これを`url`フィールドに設定する(`{project_id}`は置き換える)。
 
 
 ## デプロイ
 ```
 firebase deploy
 ```
-
-```
-Deploy complete!
-```
 デプロイ完了。Firebase ConsoleのメニューからHostingを選ぶと、ダッシュボードにデプロイ履歴が記載されてる。
+
+とりあえずここまででFirebaseにWebサイトを公開するところまで完了。
 
 ## カスタムドメインの設定
 Firebaseの管理コンソールから、 Hostingを選択して、「ドメインを接続」　ボタンを押して、ウィザードの通りに実行する。
@@ -84,6 +95,52 @@ Firebaseの管理コンソールから、 Hostingを選択して、「ドメイ�
 3. SSL証明書がプロビジョニングされるまで待つ(Firebaseがやってくれる)
 すでにGitHub PagesなどにホスティングしていてCNAMEやAレコードを貼っている場合は、2の前に外しておく。
 
-ここまででWebサイトをFirebaseにホスティングしてもらい、HTTPSに対応することができた。
+ここまででWebサイトをFirebaseにホスティングしてもらい、独自ドメインを使ってさらにHTTPSに対応することができた。
 
 ## 自動デプロイ
+GitHub Pagesの魅力の一つに、GitHub上のリポジトリにpushしたら自動でデプロイしてくれるというものがあったが、
+今のままの構成だとその恩恵をウケられないのでCIにデプロイしてもらう。今回はCirlceCI 2.0を使う。　
+
+### CI用のtokenの発行
+firebase CLIでCI用のtokenを発行する
+```
+firebase login:ci
+```
+ブラウザでGoogleサインインすると、tokenが出力されるので控えておく。
+
+### CircleCIの設定
+
+.circleci/config.ymlを書く
+{% highlight yaml %}
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/ruby:latest
+    steps:
+      - checkout
+      - run:
+          name: Install firebase-tools
+          command: |
+            curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            echo prefix=${HOME}/.local >> ~/.npmrc
+            npm install -g firebase-tools
+      - run:
+          name: Install dependencies
+          command: bundle install
+      - run:
+          name: Build
+          command: make build
+      - run:
+          name: Deploy
+          command: ~/.local/bin/firebase deploy --token $FIREBASE_TOKEN
+{% endhighlight %}
+
+CircleCIのprojectに、さっき取得したCI用tokenを環境変数として指定する。ここでは`FIREBASE_TOKEN`。
+
+これでGitHubにpushするとデプロイされるようになった。
+
+## まとめ
+このブログはCircleCI, GitHub, Firebase Hostingに支えられています。
