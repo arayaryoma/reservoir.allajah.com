@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/ruby:latest
+    steps:
+      - checkout
+      - run:
+          name: Install firebase-tools
+          command: |
+            curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            echo prefix=${HOME}/.local >> ~/.npmrc
+            npm install -g firebase-tools
+      - run:
+          name: Install dependencies
+          command: bundle install
+      - run:
+          name: Build
+          command: make build
+      - run:
+          name: Deploy
+          command: firebase deploy --token $FIREBASE_TOKEN
