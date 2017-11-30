@@ -1,5 +1,5 @@
 ---
-title: "2017年にあったKosen10'sの動きまとめ"
+title: "2017年にあったKosen10sの動きまとめ"
 date: "2017-12-01 00:00:00 +0900"
 ---
 
@@ -132,7 +132,7 @@ Channel Name: #lt09
 Created by: sakasin
 Created at: 2017/7/31
 Purpose:
-Topic: 日程調整
+Topic: 日程調整
 
 Channel Name: #lt10
 Created by: allajah
