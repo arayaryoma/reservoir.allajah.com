@@ -1,6 +1,6 @@
 ---
 title: "フラー株式会社を退職し、合同会社ヘマタイトに入社しました"
-date: "2017-12-02 00:00:00 +0900"
+date: "2017-12-01 00:00:00 +0900"
 tags:
   - 雑記
   - 転職
@@ -18,8 +18,6 @@ tags:
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 翌日、10月1日に[合同会社ヘマタイト](https://fe2o3.jp)に入社し、現在楽しく働いています。
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">転職して業務開始1日目なんですが、「自宅でけものフレンズをスピーカーとサブディスプレイで垂れ流しながら仕事できる職場、最高かよ」ってなってます</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/914720135541178368?ref_src=twsrc%5Etfw">2017年10月2日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 退職エントリを書き途中で長らく放置していたのですが、
 ちょうど退職者 Advent Calendarが目に留まりこれは良いと思って即参加登録しました。
@@ -73,8 +71,12 @@ CEOやCTOは「戦いの中でしか成長できない」ということを言�
 パートタイム契約で副業を始めました。<br>
 転職活動を始めたのはそれから2ヶ月くらい後のことで、いくつかの会社の人事の方々とお話させていただきましたが、最終的にヘマタイトに正社員として入社することに決めました。
 
-最大の決め手となったのは、リモート・フルフレックスで働けるという点でした。<br>
-この働き方はフラーにいるときからやってみたいことで、現在はこの制度を最大限いかして仕事しています。<br>
+最大の決め手となったのは、リモート・フルフレックスタイムで働けるという点でした。<br>
+この働き方はフラーにいるときからやってみたかったことで、現在はこの制度を最大限いかして仕事しています。<br>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">転職して業務開始1日目なんですが、「自宅でけものフレンズをスピーカーとサブディスプレイで垂れ流しながら仕事できる職場、最高かよ」ってなってます</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/914720135541178368?ref_src=twsrc%5Etfw">2017年10月2日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 リモート・フルフレックスで働いてみての所感はこんどまたブログに書きたいと思います。
 
 最初の会社に入るときも、今回の転職も、`履歴書・職務経歴書 -> 面接`といった採用フローをまともに
@@ -86,6 +88,14 @@ CEOやCTOは「戦いの中でしか成長できない」ということを言�
 
 あとは、フラーメンバーに対して、「これだけは絶対にやるべき」というあることをプレゼンしたり、
 退職日に社内ドキュメント共有ツールにポエムを投稿したりしました。
+
+なお、このポエムは1ヶ月後抹消することに成功しています。
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">前職を退職する直前にQiita::Teamに投稿したポエム、そろそろ賞味期限切れだと思うのでこのツイートを見た方は消しておいてください...</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/927929698738245632?ref_src=twsrc%5Etfw">2017年11月7日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">放った刺客により、前職のQiita::Teamに投稿したポエムを削除することに成功した</p>&mdash; あらや (@_araya_) <a href="https://twitter.com/_araya_/status/928878620357009409?ref_src=twsrc%5Etfw">2017年11月10日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 数百行のlintエラーを直し、言いたかったことを言ってすっきり退職しました。<br>
 退職直前に負債を出来る限り返済するの、気持ちよく退職できるのでおすすめです。
