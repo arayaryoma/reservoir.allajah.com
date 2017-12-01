@@ -3,12 +3,12 @@
 <html lang="ja">
 
 <head>
-  <meta content='{{ page.title }} - {{ site.title }}' name='title' />
-  <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+  <meta content='{{ page.title | escape }} - {{ site.title | escape }}' name='title' />
+  <meta content='{{ page.title | escape }} - {{ site.title | escape }}' name='og:title' />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//necolas.github.io/normalize.css/7.0.0/normalize.css">
   <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-  <title>{{ page.title }} - {{ site.title }}</title>
+  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
   {% include head.html %}
 </head>
 
