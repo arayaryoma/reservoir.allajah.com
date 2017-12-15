@@ -34,7 +34,7 @@ parseInt('hello', 10) // => NaN
 ## Truthy, Falsy
 `NaN`を単体で評価するとFalsyになります。直感的ですね。
 {% highlight javascript %}
-NaN ? 'foo' : 'hoge'; // => 'foo'
+NaN ? 'foo' : 'hoge'; // => 'hoge'
 {% endhighlight %}
 
 ## 比較
