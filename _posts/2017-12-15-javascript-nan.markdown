@@ -96,12 +96,12 @@ Number.isNaN(null) // => false
 すばらしいですね。非常にわかりやすくなりました。とはいえ、前時代のJavaScriptを書かなければいけないこともあるかもしれません。
 そのときは先に述べた、`NaNは比較演算子で評価した場合、どんな値とも等価にはならない`という性質を利用します。
 {% highlight javascript %}
-Number.isNumber = function(val) {
+Number.isNaN = function(val) {
   return val !== val;
 }
 
-Number.isNumber(NaN) // => true;
-Number.isNumber(0) // => false;
+Number.isNaN(NaN) // => true;
+Number.isNaN(0) // => false;
 {% endhighlight %}
 
 ## まとめ
