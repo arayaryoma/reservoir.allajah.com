@@ -6,6 +6,7 @@ signoff:          "Allajah" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-104175258-1
 share:            true # Turn on twitter and facebook share buttons
+timezone: Asia/Tokyo
 
 links:
   - name:         Posts
