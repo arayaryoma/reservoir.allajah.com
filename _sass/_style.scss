@@ -181,6 +181,7 @@ h2 {
 
   code.highlighter-rouge {
     padding: 0 0.4em;
+    overflow-wrap: break-word;
   }
   .highlighter-rouge {
     background: lighten($main-text-color, 57%)
