@@ -125,6 +125,10 @@ h2 {
     color: #357edd;
   }
 
+  ul {
+     overflow-wrap: break-word;
+  }
+
   pre {
     margin: 0;
     overflow: auto;
