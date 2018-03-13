@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "reservoir",
       "styles": [
-        "styles.stylus"
+        "styles.styl"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
