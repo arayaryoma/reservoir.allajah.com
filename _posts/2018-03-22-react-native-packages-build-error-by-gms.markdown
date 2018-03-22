@@ -32,14 +32,14 @@ Google Play Servicesのバージョンを11.8.0に固定することで、ひと
 
 具体的には、次の1もしくは2どちらかを施すことでビルドエラーを回避することができます。
 
-### 1. package内のbuild.gradleを書き換える
+### A. package内のbuild.gradleを書き換える
 問題が起きているpackage(今回の例ではreact-native-camera)内のbuild.gradle(`nonde_modules/react-native-camera/android/build.gradle`)を編集し、Google Play Servicesのバージョンを11.8.0に固定します。
 
 before: `'com.google.android.gms:play-services-vision:+'`
 
 after: `'com.google.android.gms:play-services-vision:11.8.0'`
 
-### 2. プロジェクトのbuild.gradleでGoogle Play Servicesのバージョンを11.8.0に固定する
+### B. プロジェクトのbuild.gradleでGoogle Play Servicesのバージョンを11.8.0に固定する
 `android/build.gradle`に以下のように記述することで、Google Play Servicesのバージョンを固定します。
 
 ```
