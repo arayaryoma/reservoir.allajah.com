@@ -6,7 +6,7 @@ tags:
 ---
 
 ## 何が起こっているか
-React Nativeプロジェクトでreact-native-cameraなどの、一部のライブラリに依存しているとAndroidのビルドが失敗する現象が起きています。
+React Nativeプロジェクトで、react-native-cameraなどの一部のライブラリに依存しているとAndroidのビルドが失敗する現象が起きています。
 
 ```
 Execution failed for task ':react-native-camera:processReleaseResources'.
@@ -33,7 +33,7 @@ Google Play Servicesのバージョンを11.8.0に固定することで、ひと
 具体的には、次のAもしくはBどちらかを施すことでビルドエラーを回避することができます。
 
 ### A. package内のbuild.gradleを書き換える
-問題が起きているpackage(今回の例ではreact-native-camera)内のbuild.gradle(`nonde_modules/react-native-camera/android/build.gradle`)を編集し、Google Play Servicesのバージョンを11.8.0に固定します。
+問題が起きているpackage(今回の例ではreact-native-camera)内のbuild.gradle(`node_modules/react-native-camera/android/build.gradle`)を編集し、Google Play Servicesのバージョンを11.8.0に固定します。
 
 before: `'com.google.android.gms:play-services-vision:+'`
 
