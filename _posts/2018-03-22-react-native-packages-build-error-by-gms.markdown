@@ -1,5 +1,5 @@
 ---
-title: "React Nativeの一部のライブラリでAndroidのビルドが失敗する件について"
+title: "React Nativeの一部のライブラリが原因でAndroidのビルドが失敗する件について"
 date: "2018-03-22 10:00:00 +0900"
 tags:
   - React Native
@@ -30,7 +30,7 @@ Google Play Servicesのバージョンを11.8.0に固定することで、ひと
 
 しかし、本来は各ライブラリが12.0.0に対応すべきなので、あくまで一時的な対応であることに留意してください。
 
-具体的には、次の1もしくは2どちらかを施すことでビルドエラーを回避することができます。
+具体的には、次のAもしくはBどちらかを施すことでビルドエラーを回避することができます。
 
 ### A. package内のbuild.gradleを書き換える
 問題が起きているpackage(今回の例ではreact-native-camera)内のbuild.gradle(`nonde_modules/react-native-camera/android/build.gradle`)を編集し、Google Play Servicesのバージョンを11.8.0に固定します。
