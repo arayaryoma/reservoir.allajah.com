@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const fm = require('front-matter');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: path.resolve(__dirname, './src/scripts/index.js'),
@@ -19,17 +20,29 @@ const config = {
             },
         ]
     },
-    plugins: []
+    plugins: [
+        new htmlWebpackPlugin({
+            template: './src/layout/index.html',
+            filename: `index.html`,
+        }),
+    ]
+};
+
+const readPostMeta = (post) => {
+    const data = fs.readFileSync(path.resolve(__dirname, `src/posts/${post}`));
+    const content = fm(data.toString());
+    return content.attributes;
 };
 
 const generatePages = (posts) => {
     const res = [];
     for (let post of posts) {
         const name = /(.*)\.md$/.exec(post)[1];
+        const meta = readPostMeta(post);
         res.push(
             new htmlWebpackPlugin({
                 template: './src/layout/post.html',
-                title: name,
+                title: meta.title,
                 filename: `posts/${name}.html`,
                 post: post
             })
