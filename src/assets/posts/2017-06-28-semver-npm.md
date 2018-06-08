@@ -1,6 +1,6 @@
 ---
-title: "package.jsonでのセマンティックバージョン指定方法"
-date: "2017-06-28 16:02:11 +0900"
+title: package.jsonでのセマンティックバージョン指定方法
+date: 2017-06-28T16:02:11
 tags:
   - node.js
   - npm

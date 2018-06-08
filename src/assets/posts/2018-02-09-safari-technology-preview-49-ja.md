@@ -1,6 +1,6 @@
 ---
-title: "Safari Technology Preview 49"
-date: "2018-02-09 03:30:00 +0900"
+title: Safari Technology Preview 49
+date: 2018-02-09T03:30:00
 tags:
   - Safari
   - Browser

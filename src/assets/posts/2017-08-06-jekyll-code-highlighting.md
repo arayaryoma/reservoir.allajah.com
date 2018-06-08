@@ -1,6 +1,6 @@
 ---
-title: "jekyll code highlighting"
-date: "2017-08-06 21:49:42 +0900"
+title: jekyll code highlighting
+date: 2017-08-06T21:49:42
 tags:
   - jekyll
 ---

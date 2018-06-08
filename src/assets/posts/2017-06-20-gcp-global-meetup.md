@@ -1,6 +1,6 @@
 ---
-title: "GCP Global Meetupに参加してきた"
-date: "2017-06-20 19:42:53 +0900"
+title: GCP Global Meetupに参加してきた
+date: 2017-06-20T19:42:53
 tags:
   - イベントレポート
   - Google Cloud Platform

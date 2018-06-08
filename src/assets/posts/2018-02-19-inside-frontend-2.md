@@ -1,6 +1,6 @@
 ---
-title: "InsideFrontend #2 に参加してきた"
-date: "2018-02-19 16:00:00 +0900"
+title: InsideFrontend #2 に参加してきた
+date: 2018-02-19T16:00:00
 tags:
   - 勉強会レポート
 ---

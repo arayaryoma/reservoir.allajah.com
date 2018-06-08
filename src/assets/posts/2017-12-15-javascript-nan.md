@@ -1,6 +1,6 @@
 ---
-title: "JavaScript の NaN について"
-date: "2017-12-15 15:44:13 +0900"
+title: JavaScript の NaN について
+date: 2017-12-15T15:44:13
 tags:
   - JavaScript
 ---

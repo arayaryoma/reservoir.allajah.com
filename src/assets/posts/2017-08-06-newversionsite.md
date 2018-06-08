@@ -1,6 +1,6 @@
 ---
-title: "このWebサイトのstyleを書き換えた(v0.3.0)"
-date: "2017-08-06 01:27:56 +0900"
+title: このWebサイトのstyleを書き換えた(v0.3.0)
+date: 2017-08-06T01:27:56
 tags:
   - Web Front-end
   - update
