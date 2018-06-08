@@ -1,0 +1,92 @@
+---
+title: "tng26"
+date: "2017-06-28 19:30:35 +0900"
+---
+
+東京 Node 学園祭 2017 11/25,26 に法政大学
+http://nodefest.jp/2017/
+
+# Capability of React Fiber @koba04
+
+## React のアーキテクチャ
+
+- Component + JSX, Reconciler, Renderer
+
+## Reconciliation
+
+- Virtual DOM っていわれてたやつ
+- 変更を検知したりする
+
+## React Fiber
+
+- 更新処理がスケジューリングできるようになった
+- レンダーメソッドから Array や文字列を直接返せるようになった
+- 1 つの Object になってる(Linked List)
+
+### なんで必要？
+
+- 今の実装は ReactElementTree を再帰的、同期的に処理してる
+
+### スケジューリング？
+
+- タイムベーススケジューリング
+  - requestIdleCallback でスケジューリング
+- プライオリティベース
+  - 優先度付けれる
+
+### Phases
+
+- begin, complete, commit の 3 つの Phases
+
+### Lifecycle methods
+
+- WillDoSomething は begin, DidSomething は commit で行われる
+
+### まとめ
+
+- 今年の夏くらいに React v16 が出る
+- v17 で非同期モードがデフォルトになる
+- ReactFiber が他の言語で実装される気配がある
+- ReactFiber はさらに便利な機能を楽に実装するためのインフラ
+- パフォーマンスよりも利便性を重視
+
+# Vue.js on Storybook @kazu_pon
+
+https://speakerdeck.com/kazupon/vue-on-storybook
+
+# Dependent type と TypeScript @noraesae
+
+# ProxyServer を使った本番環境での E2E テスト @brn227 - JavaScript SDK の E2E テスト -
+
+# SDK はクライアントの環境でテストしなきゃいけない - document.write と document.open の協力バグがあった -
+
+# node-mitm-proxy - Nightwatch.js - Nightwatch だと FireFox に Proxy 設定できなくて、モバイルも厳しい。 - 最終的にテストチームの人力でテストしてる
+
+# Angular PWA laco さん http://slides.com/laco/nodeschool-angular-pwa#/
+
+- Connectivity Independent, App-like, Fresh, Re-engageable が AngularPWA で容易に対応可能
+
+## App Shell
+
+- Angular Universal
+  - @angular/platform-server
+    - node.js じょうで angular アプリケーションを実行
+    - 実行結果を HTML の文字列として取得可能
+
+## Angular Mobile Toolkit
+
+- https://mobile.angular.io は完全に死んでるからコード読むしかない笑
+
+### @angular/app-shell
+
+- App Shell に含める/含めない要素を指定できる
+
+### @angular/service-worker
+
+- ServiceWorker 用の JS を生成するツール
+  - ng build --prod したときに自動生成してくれる
+- Automatic PWAs
+
+# Nested Native Modules by h2so5
+
+# chunked encoding による高速化の検証 by shibu_jp
