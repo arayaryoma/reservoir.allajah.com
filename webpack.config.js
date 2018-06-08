@@ -58,7 +58,8 @@ const config = lang => {
       new HtmlPlugin({
         template: "src/templates/index.pug",
         filename: "index.html",
-        i18n: internationalize(lang)
+        i18n: internationalize(lang),
+        posts
       }),
       new MiniCssExtractPlugin({
         filename: "[name].css",
