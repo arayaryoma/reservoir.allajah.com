@@ -6,6 +6,9 @@ html
     title New Web Site
   body
     .container
-      each post in posts
-        a(href=`/posts/${post.filename}.html`) !{post.title}
-        p !{post.date}
+      .posts
+        each post in posts
+          .post-card
+            a.post-preview(href=`/posts/${post.filename}.html`)
+              span.post-preview-title !{post.title}
+              //span !{post.date}
