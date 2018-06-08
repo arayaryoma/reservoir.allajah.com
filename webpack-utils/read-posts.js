@@ -6,6 +6,15 @@ const readPostsSync = () => {
   return fs.readdirSync(path.resolve(__dirname, "../src/assets/posts/"));
 };
 
+/*
+{
+  filename: string;
+  title: string;
+  date: string;
+  abstract: string;
+}[]
+ */
+
 const getPostMeta = filename => {
   const converter = new showdown.Converter();
   converter.setOption("metadata", true);
@@ -14,6 +23,7 @@ const getPostMeta = filename => {
   );
   converter.makeHtml(buffer.toString());
   const metadata = converter.getMetadata();
+  metadata.filename = filename.split(".md")[0];
   return metadata;
 };
 

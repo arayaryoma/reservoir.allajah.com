@@ -1,0 +1,6 @@
+- const post = htmlWebpackPlugin.options.post
+html
+  body
+    div.container
+      article.article
+        | !{require(`../assets/posts/${post.filename}.md`)}

@@ -41,7 +41,16 @@ let posts = [];
 for (const file of readPosts.readPostsSync()) {
   posts.push(readPosts.getPostMeta(file));
 }
-console.log(posts);
+const postsHtmlPluginInstances = [];
+for (post of posts) {
+  postsHtmlPluginInstances.push(
+    new HtmlPlugin({
+      template: "src/templates/post.pug",
+      filename: `posts/${post.filename}.html`,
+      post
+    })
+  );
+}
 
 const config = lang => {
   return {
@@ -71,7 +80,8 @@ const config = lang => {
           from: "public/*",
           to: ""
         }
-      ])
+      ]),
+      ...postsHtmlPluginInstances
     ],
     module: {
       rules: [
@@ -131,7 +141,7 @@ const config = lang => {
         },
         {
           test: /\.md$/,
-          use: "markdown-loader"
+          use: ["html-loader", "markdown-loader"]
         }
       ]
     },

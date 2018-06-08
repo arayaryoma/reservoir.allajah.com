@@ -7,5 +7,5 @@ html
   body
     .container
       each post in posts
-        p !{post.title}
+        a(href=`/posts/${post.filename}.html`) !{post.title}
         p !{post.date}
