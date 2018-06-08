@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const yaml = require("js-yaml");
 const fs = require("fs");
 const PRODUCTION = process.env.NODE_ENV === "production";
+const readPosts = require("./webpack-utils/read-posts");
 
 const languages = {
   ja: yaml.safeLoad(fs.readFileSync("./src/assets/i18n/ja.yml"), "utf8")
@@ -28,7 +29,21 @@ const internationalize = lang => {
   };
 };
 
-function config(lang) {
+/*
+{
+  filename: string;
+  title: string;
+  date: string;
+  abstract: string;
+}[]
+ */
+let posts = [];
+for (const file of readPosts.readPostsSync()) {
+  posts.push(readPosts.getPostMeta(file));
+}
+console.log(posts);
+
+const config = lang => {
   return {
     entry: ["babel-polyfill", "./src/scripts/index.js"],
     resolve: {
@@ -112,6 +127,10 @@ function config(lang) {
               loader: "pug-loader"
             }
           ]
+        },
+        {
+          test: /\.md$/,
+          use: "markdown-loader"
         }
       ]
     },
@@ -120,7 +139,7 @@ function config(lang) {
       port: 4000
     }
   };
-}
+};
 
 module.exports = Object.keys(languages).map(lang => {
   return config(lang);
