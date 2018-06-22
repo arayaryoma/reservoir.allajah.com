@@ -2,5 +2,7 @@
 html
   body
     div.container
-      article.article
-        | !{require(`../assets/posts/${post.filename}.md`)}
+      div.article-container
+        article.article
+          h1.title !{post.title}
+          | !{require(`../assets/posts/${post.filename}.md`)}
