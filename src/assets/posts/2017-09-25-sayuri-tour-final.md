@@ -106,16 +106,16 @@ CD を買うのは完全に予定外でしたが、僕が発売当初に購入�
 
 最後に購入したグッズの写真を載せて終わります。
 
-![badge]({{site.url}}/images/sayuri-tour-final/badge.jpg)
+![badge](/images/sayuri-tour-final/badge.jpg)
 _缶バッジガチャ。お釣りがちょうど 500 円だったので回してみた_
 
-![poncho]({{site.url}}/images/sayuri-tour-final/poncho.jpg)
+![poncho](/images/sayuri-tour-final/poncho.jpg)
 _ポンチョ。普段着にしようとは思ってるけどちょっと難易度高い_
 
-![t-shirt]({{site.url}}/images/sayuri-tour-final/t-shirt.jpg)
+![t-shirt](/images/sayuri-tour-final/t-shirt.jpg)
 _T シャツ。黒と白の 2 色あって、黒にした_
 
-![cd]({{site.url}}/images/sayuri-tour-final/cd.jpg)
+![cd](/images/sayuri-tour-final/cd.jpg)
 _ミカヅキの航海 初回生産限定盤 A。カバーにサインが入ってる_
 
 ## 完全に余談

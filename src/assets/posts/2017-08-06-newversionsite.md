@@ -12,7 +12,7 @@ scribble をベースに style 書き換えた。
 reset.css に[normalize.css](https://necolas.github.io/normalize.css/)使ってるくらいで、
 ほかは全部自分で書くようにした。
 
-![compare]({{site.url}}/images/2017-08-06-newversionsite/compare.jpg)
+![compare](/images/2017-08-06-newversionsite/compare.jpg)
 
 左が古いやつで右が新しいやつ
 
