@@ -79,6 +79,11 @@ const config = lang => {
         {
           from: "public/*",
           to: ""
+        },
+        {
+          from: "src/assets/images/",
+          to: "",
+          toType: "dir"
         }
       ]),
       ...postsHtmlPluginInstances
