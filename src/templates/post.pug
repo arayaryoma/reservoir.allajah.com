@@ -2,7 +2,10 @@
 html
   body
     div.container
+      h2.site-title
+        a(href="/") Araya's reservoir
       div.article-container
         article.article
+          span.article-date !{post.date}
           h1.title !{post.title}
           | !{require(`../assets/posts/${post.filename}.md`)}

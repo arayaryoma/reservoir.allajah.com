@@ -6,9 +6,15 @@ html
     title New Web Site
   body
     .container
+      h1.site-title Araya's reservoir
+      .site-description
+        p 主にWeb技術について書きます。
+        p 雑記 ->
+          a(href="http://allajah.hatenablog.com") はてなブログ
       .posts
         each post in posts
           .post-card
             a.post-preview(href=`/posts/${post.filename}.html`)
-              span.post-preview-title !{post.title}
-              //span !{post.date}
+              h2.post-preview-title !{post.title}
+              span.post-preview-date !{post.date}
+    include footer
