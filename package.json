@@ -51,6 +51,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "prismjs": "^1.15.0"
   }
 }

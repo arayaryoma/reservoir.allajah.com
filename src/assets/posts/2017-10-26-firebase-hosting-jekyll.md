@@ -132,7 +132,8 @@ firebase login:ci
 ### CircleCI の設定
 
 .circleci/config.yml を書く
-{% highlight yaml %}
+
+```yaml
 version: 2
 jobs:
 build:
@@ -151,7 +152,7 @@ name: Build
 command: make build - run:
 name: Deploy
 command: ~/.local/bin/firebase deploy --token $FIREBASE_TOKEN
-{% endhighlight %}
+```
 
 CircleCI の project に、さっき取得した CI 用 token を環境変数として指定する。ここでは`FIREBASE_TOKEN`。
 

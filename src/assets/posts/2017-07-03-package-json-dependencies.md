@@ -6,11 +6,12 @@ date: 2017-07-03T11:09:31
 ## dependencies
 
 module 名を key、バージョンを value とした Object で定義する。
-{% highlight json %}
+
+```json
 "dependencies": {
 "react": "^15.6.0"
 }
-{% endhighlight %}
+```
 
 tarball や git の URL も使うことができる。
 
@@ -20,14 +21,14 @@ tarball や git の URL も使うことができる。
 ある module をインストールしたとき、その module に devDependencies として指定されている module は依存関係として解決されない。
 CoffeeScript, TypeScript などの AltJS や ES 最新版を CommonJS 向けにコンパイル/トランスパイルする必要がある module の場合は、 `scripts.prepare` にビルドスクリプトを指定しておくとよい。
 
-{% highlight json %}
+```json
 "devDependencies": {
 "coffee-script": "~1.6.3"
 }
 "scripts": {
 "prepare": "coffee -o lib/ -c src/index.coffee"
 }
-{% endhighlight %}
+```
 
 これによって npm registry に publish される前に `scripts.prepare` で指定したコマンドが実行される。
 
@@ -44,14 +45,14 @@ peerDependencies に指定されている module がプロジェクトにイン�
 package.json
 {:.filename}
 
-{% highlight json %}
+```json
 {
-"name": "npm-sample",
-"dependencies": {
-"webpack-dev-server": "^2.6.1"
+  "name": "npm-sample",
+  "dependencies": {
+    "webpack-dev-server": "^2.6.1"
+  }
 }
-}
-{% endhighlight %}
+```
 
 ```
 $ npm install
@@ -64,15 +65,15 @@ peerDependency のエラーが出た時は指定されている dependency が�
 package.json
 {:.filename}
 
-{% highlight json %}
+```json
 {
-"name": "npm-sample",
-"dependencies": {
-"webpack": "^3.4.1",
-"webpack-dev-server": "^2.6.1"
+  "name": "npm-sample",
+  "dependencies": {
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
 }
-}
-{% endhighlight %}
+```
 
 ## bundledDependencies または bundleDependencies
 
@@ -81,15 +82,15 @@ package 名を配列で記述する。
 
 /tmp/npm-sample/package.json
 {:.filename}
-{% highlight json %}
+
+```json
 {
-"name": "npm-sample",
-"version": "v0.0.0",
-"dependencies": {
-},
-"bundledDependencies": ["colorpack"]
+  "name": "npm-sample",
+  "version": "v0.0.0",
+  "dependencies": {},
+  "bundledDependencies": ["colorpack"]
 }
-{% endhighlight %}
+```
 
 ```
 $ npm pack
@@ -98,58 +99,61 @@ npm-sample-0.0.0.tgz
 
 /tmp/bundle-sample/package.json
 {:.filename}
-{% highlight json %}
+
+```json
 {
-"name": "bundle-sample",
-"dependencies": {
-"npm-sample": "file:../npm-sample/npm-sample-0.0.0.tgz"
+  "name": "bundle-sample",
+  "dependencies": {
+    "npm-sample": "file:../npm-sample/npm-sample-0.0.0.tgz"
+  }
 }
-}
-{% endhighlight %}
+```
 
 /tmp/bundle-sample/package-lock.json
 {:.filename}
-{% highlight json %}
+
+```json
 {
-"name": "bundle-sample",
-"version": "1.0.0",
-"lockfileVersion": 1,
-"requires": true,
-"dependencies": {
-"colorpack": {
-"version": "0.0.2",
-"resolved": "https://registry.npmjs.org/colorpack/-/colorpack-0.0.2.tgz"
-},
-"npm-sample": {
-"version": "file:../npm-sample/npm-sample-0.0.0.tgz",
-"requires": {
-"colorpack": "0.0.2"
+  "name": "bundle-sample",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "colorpack": {
+      "version": "0.0.2",
+      "resolved": "https://registry.npmjs.org/colorpack/-/colorpack-0.0.2.tgz"
+    },
+    "npm-sample": {
+      "version": "file:../npm-sample/npm-sample-0.0.0.tgz",
+      "requires": {
+        "colorpack": "0.0.2"
+      }
+    }
+  }
 }
-}
-}
-}
-{% endhighlight %}
+```
 
 `/tmp/npm-sample`の package.json 内で bundledDependencies として指定した`colorpack`が、依存関係として解決されてるのがわかる。
 
 ## optionalDependencies
 
 名前の通り、必須ではないオプショナルな dependency を指定する。optionalDependency をコード内で使用する場合、dependency がインストールされているかを判定する必要がある。
-{% highlight js %}
+
+```javascript
 try {
-var foo = require('foo')
-var fooVersion = require('foo/package.json').version
+  var foo = require("foo");
+  var fooVersion = require("foo/package.json").version;
 } catch (er) {
-foo = null
+  foo = null;
 }
-if ( notGoodFooVersion(fooVersion) ) {
-foo = null
+if (notGoodFooVersion(fooVersion)) {
+  foo = null;
 }
 
 if (foo) {
-foo.doFooThings()
+  foo.doFooThings();
 }
-{% endhighlight %}
+```
 
 # まとめ
 
