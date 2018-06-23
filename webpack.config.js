@@ -7,6 +7,8 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 const PRODUCTION = process.env.NODE_ENV === "production";
 const readPosts = require("./webpack-utils/read-posts");
+const _ = require("lodash");
+const dayjs = require("dayjs");
 
 const languages = {
   ja: yaml.safeLoad(fs.readFileSync("./src/assets/i18n/ja.yml"), "utf8")
@@ -41,6 +43,9 @@ let posts = [];
 for (const file of readPosts.readPostsSync()) {
   posts.push(readPosts.getPostMeta(file));
 }
+
+posts = _.sortBy(posts, p => dayjs(p.date).valueOf());
+posts = posts.reverse();
 const postsHtmlPluginInstances = [];
 for (post of posts) {
   postsHtmlPluginInstances.push(
