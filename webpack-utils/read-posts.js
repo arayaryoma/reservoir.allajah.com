@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const showdown = require("showdown");
+const dayjs = require("dayjs");
 
 const readPostsSync = () => {
   return fs.readdirSync(path.resolve(__dirname, "../src/assets/posts/"));
@@ -24,9 +25,12 @@ const getPostMeta = filename => {
   converter.makeHtml(buffer.toString());
   const metadata = converter.getMetadata();
   metadata.filename = filename.split(".md")[0];
+  metadata.date = parseDate(metadata.date);
   return metadata;
 };
 
-const posts = readPostsSync();
-getPostMeta(posts[0]);
+const parseDate = date => {
+  return dayjs(date).format("YYYY-MM-DD");
+};
+
 module.exports = { readPostsSync, getPostMeta };
