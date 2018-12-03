@@ -1,4 +1,3 @@
-_site
-.sass-cache
-.jekyll-metadata
-.tweet-cache
+.next
+_posts/posts.json
+yarn-error.log
