@@ -60,7 +60,7 @@ TC39はここで、仕様が開発され、最終的に標準仕様に組み込�
 Stage3に進むための条件は
 - 仕様書の完了
 - 指定されたレビューアーが仕様書を承認している
-- 全てのECMASｃript編集者が仕様書を承認している
+- 全てのECMAScript編集者が仕様書を承認している
 
 です。
 Stage3では仕様の策定は完了し、ブラウザの実装や、ユーザーからのフィードバックを待ちます。
@@ -71,7 +71,7 @@ Stage4に進むための条件は
 - 2つ以上の競合する主要なJSエンジンで実装されている
 - [tc39/test262](https://github.com/tc39/test262)の受け入れテストが主要なユースシナリオ用に作成され、マージされている。
 - [tc39/ecma262](https://github.com/tc39/ecma262)に、統合された仕様書とともに全てのPRが提出されている。
-- 全てのECMASｃript編集者がPRを全て承認している。
+- 全てのECMAScript編集者がPRを全て承認している。
 
 などです。Stage4に入った仕様は、次回のECMAScriptのリリースで標準仕様としてリリースされることが決定しています。
 
@@ -261,7 +261,7 @@ Reflect.getPrototypeOf(f) === r2.global.Function.prototype // true
 セキュリティ上の都合でglobalから切り離したり、ブラウザ上のエディタ開発で有用(らしい)です。
 
 ### [Observable](https://github.com/tc39/proposal-observable) (Stage1)
-みんな大好き(?)ObservableもECMASｃript標準にしようというproposalも出ています。
+みんな大好き(?)ObservableもECMAScript標準にしようというproposalも出ています。
 Rx.jsのような潤沢なoperatorはまだありませんが、
 `Observable.of()`や`Observable.from()`でObservableなobjectを作り、`subsucribe`、`unsubscribe`するという
 馴染み深いインターフェースになっています。
@@ -424,7 +424,7 @@ EdgeのJavaScriptのエンジンがChakraからV8になると、
 
 の4つで、ここからChakraを抜いた3つのうち2つのブラウザで実装される必要があります。
 
-10年後くらいにはV8大統一時代が来て、ECMASｃriptは実質V8の仕様になるかも・・・？
+10年後くらいにはV8大統一時代が来て、ECMAScriptは実質V8の仕様になるかも・・・？
 
 ## まとめ
 ECMAScriptには新しい機能仕様がどんどん提案・追加されていて、JavaScriptは進化し続けています。
