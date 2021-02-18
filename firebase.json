@@ -1,10 +1,44 @@
 {
   "hosting": {
-    "public": "_site",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://blog.araya.dev/",
+        "type": "307"
+      },
+      {
+        "source": "/posts/f-to-h.html",
+        "destination": "https://blog.araya.dev/posts/2017-12-02/f-to-h.html",
+        "type": "308"
+      },
+      {
+        "source": "/posts/firebase-hosting-jekyll.html",
+        "destination": "https://blog.araya.dev/posts/2017-10-26/firebase-hosting-jekyll.html",
+        "type": "308"
+      },
+      {
+        "source": "/posts/package-json-dependencies.html",
+        "destination": "https://blog.araya.dev/posts/2017-07-03/package-json-dependencies.html",
+        "type": "308"
+      },
+      {
+        "source": "/posts/ecmascript-proposals.html",
+        "destination": "https://blog.araya.dev/posts/2018-12-06/ecmascript-proposals.html",
+        "type": "308"
+      },
+      {
+        "source": "/posts/semver-npm.html",
+        "destination": "https://blog.araya.dev/posts/2017-06-28/semver-npm.html",
+        "type": "308"
+      },
+
+      {
+        "source": "/posts/javascript-nan.html",
+        "destination": "https://blog.araya.dev/posts/2017-12-15/javascript-nan.html",
+        "type": "308"
+      }
     ]
   }
 }
